@@ -1,0 +1,63 @@
+{
+    "bottle": {
+        "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420937370-1629958698/bottle.tar.xz",
+        "download": false
+    },
+    "cable": {
+        "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420937413-1629958794/cable.tar.xz",
+        "download": false
+    },
+    "capsule": {
+        "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420937484-1629959013/carpet.tar.xz",
+        "download": false
+    },
+    "carpet": {
+        "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420937484-1629959013/carpet.tar.xz",
+        "download": false
+    },
+    "grid": {
+        "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420937487-1629959044/grid.tar.xz",
+        "download": false
+    },
+    "hazelnut": {
+        "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420937545-1629959162/hazelnut.tar.xz",
+        "download": true
+    },
+    "leather": {
+        "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420937607-1629959262/leather.tar.xz",
+        "download": false
+    },
+    "metal_nut": {
+        "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420937637-1629959294/metal_nut.tar.xz",
+        "download": false
+    },
+    "pill": {
+        "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420938129-1629960351/pill.tar.xz",
+        "download": false
+    },
+    "screw": {
+        "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420938130-1629960389/screw.tar.xz",
+        "download": false
+    },
+    "tile": {
+        "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420938133-1629960456/tile.tar.xz",
+        "download": false
+    },
+    "toothbrush": {
+        "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420938134-1629960477/toothbrush.tar.xz",
+        "download": false
+    },
+    "transistor": {
+        "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420938166-1629960554/transistor.tar.xz",
+        "download": false
+    },
+    "wood": {
+        "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420938383-1629960649/wood.tar.xz",
+        "download": false
+    },
+    "zipper": {
+        "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420938385-1629960680/zipper.tar.xz",
+        "download": false
+    }
+    
+}
