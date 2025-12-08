@@ -32,7 +32,7 @@ def export_as_image(anomaly_map: torch.Tensor):
 
 if __name__ == "__main__":
 
-    model_filepath = "/home/jorge/anomaly_detection_project/models/model_new.pth"
+    model_filepath = "model.pth"
 
     simplenet = Simplenet()
     simplenet.load_state_dict(torch.load(model_filepath))

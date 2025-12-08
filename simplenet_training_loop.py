@@ -28,7 +28,8 @@ root_logger.addHandler(handler)
 
 train_dataset = MVTECTrainset(category="hazelnut")
 
-train_loader = DataLoader(train_dataset, batch_size=8, shuffle=True)
+batch_size = 8
+train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -50,6 +51,7 @@ if __name__ == "__main__":
             if loss < best_loss:
                 best_loss = loss
                 torch.save(Simplenet.state_dict(), "model.pth")
-        print(loss)
+            print(f"Epoch: {i}, batch :{batch_idx}, batch_size:{batch_size}. \n Loss {loss} \n")
+        print(f"Epoch: {i}. Best lost so far: {best_loss}")
     
    
