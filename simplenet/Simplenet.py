@@ -21,7 +21,7 @@ class Simplenet(torch.nn.Module):
             p.requires_grad = False
 
         # Sabemos que layer3 de ResNet50 tiene 1024 canales
-        feature_channel_size = 512
+        feature_channel_size = 1536
 
         self.sigma_noise = 0.015
         self.conv1x1 = torch.nn.Conv2d(feature_channel_size, feature_channel_size, kernel_size=1)
@@ -43,9 +43,10 @@ class Simplenet(torch.nn.Module):
 
         merged_feats = torch.cat([feat2, feat3_up], dim=1)
         
+        num_channels = merged_feats.shape[1]
 
         # pooled_features = self.avg_pool(feat2)
-        adapted_features = self.conv1x1(merged_feats).permute(0, 2, 3, 1).reshape(-1, 512) 
+        adapted_features = self.conv1x1(merged_feats).permute(0, 2, 3, 1).reshape(-1, num_channels) 
         altered_features = adapted_features.detach().clone()             
 
         z_scores_correct = self.discriminator(adapted_features)
