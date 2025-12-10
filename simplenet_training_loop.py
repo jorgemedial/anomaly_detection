@@ -18,6 +18,10 @@ import numpy as np
 from simplenet import Simplenet
 from MVTecAD import MVTECTrainset
 
+import json
+
+with open("training_config.json", "r") as f:
+    training_config = json.load(f)
 
 root_logger = logging.getLogger("simplenet_training")
 root_logger.setLevel(logging.DEBUG)
@@ -39,7 +43,7 @@ if __name__ == "__main__":
     optimizer = torch.optim.Adam(Simplenet.parameters())
 
     best_loss = torch.tensor(np.inf)
-    for i in range(50):
+    for i in range(training_config["total_epochs"]):
         for batch_idx, data in enumerate(train_loader, 1):
             optimizer.zero_grad()
 
@@ -51,7 +55,7 @@ if __name__ == "__main__":
             if loss < best_loss:
                 best_loss = loss
                 torch.save(Simplenet.state_dict(), "model.pth")
-            print(f"Epoch: {i}, batch :{batch_idx}, batch_size:{batch_size}. \n Loss {loss} \n")
+            print(f"Epoch: {i}, batch: {batch_idx}, batch_size: {batch_size}. \nLoss {loss} \n")
         print(f"Epoch: {i}. Best lost so far: {best_loss}")
     
    
