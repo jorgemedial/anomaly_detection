@@ -35,10 +35,17 @@ class Simplenet(torch.nn.Module):
     def forward(self, x):
         batch_size, _, h, w = x.shape
         out = self.backbone(x)   # dict con las keys que hemos definido
-        feat2 = out["feat2"]
+        feat2, feat3 = out["feat2"], out["feat3"]
+
+                
+        # Upsample feat3 to feat2 size
+        feat3_up = F.interpolate(feat3, size=feat2.shape[2:], mode="bilinear", align_corners=False)
+
+        merged_feats = torch.cat([feat2, feat3_up], dim=1)
+        
 
         # pooled_features = self.avg_pool(feat2)
-        adapted_features = self.conv1x1(feat2).permute(0, 2, 3, 1).reshape(-1, 512) 
+        adapted_features = self.conv1x1(merged_feats).permute(0, 2, 3, 1).reshape(-1, 512) 
         altered_features = adapted_features.detach().clone()             
 
         z_scores_correct = self.discriminator(adapted_features)
