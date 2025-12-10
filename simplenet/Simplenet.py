@@ -29,8 +29,7 @@ class Simplenet(torch.nn.Module):
         self.discriminator = torch.nn.Sequential(
             torch.nn.Linear(in_features=feature_channel_size, out_features=feature_channel_size),
             torch.nn.LeakyReLU(),
-            torch.nn.Linear(in_features=feature_channel_size, out_features=1),
-            torch.nn.LeakyReLU(),
+            torch.nn.Linear(in_features=feature_channel_size, out_features=1)
         )
 
     def forward(self, x):
