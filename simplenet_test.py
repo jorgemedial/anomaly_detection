@@ -45,18 +45,18 @@ if __name__ == "__main__":
     device = torch.device('cpu')
     simplenet.eval()
  
-    cracked_dataset = MVTECTestset(category=config["category"], anomaly_name="crack")
+    anomalous_dataset = MVTECTestset(category=config["category"], anomaly_name=config["anomaly_type"])
 
     
     with torch.no_grad():
-        for i in range(cracked_dataset.__len__()):
-            data = cracked_dataset.__getitem__(i).unsqueeze(0)
+        for i in range(anomalous_dataset.__len__()):
+            data = anomalous_dataset.__getitem__(i).unsqueeze(0)
             data = data.to(device)             
             outputs = simplenet(data)
             for output in outputs:
                 anomaly_map = process_output(output)
                 image = export_as_image(anomaly_map)
-                filename = cracked_dataset.filename_from_index(i)
+                filename = anomalous_dataset.filename_from_index(i)
                 image.save(filename)
 
     
