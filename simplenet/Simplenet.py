@@ -51,8 +51,7 @@ class Simplenet(torch.nn.Module):
         num_channels = merged_feats.shape[1]
 
         # pooled_features = self.avg_pool(feat2)
-        # adapted_features = self.conv1x1(merged_feats).permute(0, 2, 3, 1).reshape(-1, num_channels) 
-        adapted_features = merged_feats.permute(0, 2, 3, 1).reshape(-1, num_channels) 
+        adapted_features = self.conv1x1(merged_feats).permute(0, 2, 3, 1).reshape(-1, num_channels) 
         altered_features = adapted_features.detach().clone()             
 
         z_scores_correct = self.discriminator(adapted_features)
