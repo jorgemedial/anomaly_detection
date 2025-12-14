@@ -30,11 +30,12 @@ handler = logging.StreamHandler(sys.stdout)
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 handler.setFormatter(formatter)
 
-file_handler = logging.FileHandler("log.txt", mode="a", encoding="utf-8")
+file_handler = logging.FileHandler("./log.txt", mode="a", encoding="utf-8")
 file_handler.setLevel(logging.INFO)
 file_handler.setFormatter(formatter)
 
 root_logger.addHandler(handler)
+root_logger.addHandler(file_handler)
 
 train_dataset = MVTECTrainset(category=training_config["category"])
 
