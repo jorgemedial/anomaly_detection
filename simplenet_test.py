@@ -11,7 +11,7 @@ from MVTecAD import MVTECTestset
 import torch.nn.functional as F
 import json
 
-with open("training_config", "r") as f:
+with open("training_config.json", "r") as f:
     config = json.load(f)
 
 
