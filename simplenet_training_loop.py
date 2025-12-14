@@ -24,7 +24,7 @@ with open("training_config.json", "r") as f:
     training_config = json.load(f)
 
 root_logger = logging.getLogger()
-root_logger.setLevel(logging.DEBUG)
+root_logger.setLevel(logging.INFO)
 handler = logging.StreamHandler(sys.stdout)
 
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
