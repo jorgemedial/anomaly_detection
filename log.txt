@@ -1,0 +1,164 @@
+2025-12-14 22:31:24,305 - simplenet_training - INFO - Epoch: 0, batch: 1, batch_size: 8. 
+Loss 4037.58203125 
+
+2025-12-14 22:31:24,668 - simplenet_training - INFO - Epoch: 0, batch: 2, batch_size: 8. 
+Loss 87137.640625 
+
+2025-12-14 22:31:25,024 - simplenet_training - INFO - Epoch: 0, batch: 3, batch_size: 8. 
+Loss 33530.7109375 
+
+2025-12-14 22:31:25,384 - simplenet_training - INFO - Epoch: 0, batch: 4, batch_size: 8. 
+Loss 8692.28515625 
+
+2025-12-14 22:31:25,898 - simplenet_training - INFO - Epoch: 0, batch: 5, batch_size: 8. 
+Loss 2986.467041015625 
+
+2025-12-14 22:31:26,482 - simplenet_training - INFO - Epoch: 0, batch: 6, batch_size: 8. 
+Loss 2194.5146484375 
+
+2025-12-14 22:31:26,994 - simplenet_training - INFO - Epoch: 0, batch: 7, batch_size: 8. 
+Loss 1311.307373046875 
+
+2025-12-14 22:31:27,358 - simplenet_training - INFO - Epoch: 0, batch: 8, batch_size: 8. 
+Loss 1366.8397216796875 
+
+2025-12-14 22:31:27,842 - simplenet_training - INFO - Epoch: 0, batch: 9, batch_size: 8. 
+Loss 456.5538024902344 
+
+2025-12-14 22:31:28,228 - simplenet_training - INFO - Epoch: 0, batch: 10, batch_size: 8. 
+Loss 589.3309936523438 
+
+2025-12-14 22:31:28,599 - simplenet_training - INFO - Epoch: 0, batch: 11, batch_size: 8. 
+Loss 667.0335693359375 
+
+2025-12-14 22:31:29,094 - simplenet_training - INFO - Epoch: 0, batch: 12, batch_size: 8. 
+Loss 351.5495300292969 
+
+2025-12-14 22:31:29,459 - simplenet_training - INFO - Epoch: 0, batch: 13, batch_size: 8. 
+Loss 1102.995361328125 
+
+2025-12-14 22:31:29,814 - simplenet_training - INFO - Epoch: 0, batch: 14, batch_size: 8. 
+Loss 882.8286743164062 
+
+2025-12-14 22:31:30,168 - simplenet_training - INFO - Epoch: 0, batch: 15, batch_size: 8. 
+Loss 531.4130249023438 
+
+2025-12-14 22:31:30,522 - simplenet_training - INFO - Epoch: 0, batch: 16, batch_size: 8. 
+Loss 625.12890625 
+
+2025-12-14 22:31:30,876 - simplenet_training - INFO - Epoch: 0, batch: 17, batch_size: 8. 
+Loss 352.8604431152344 
+
+2025-12-14 22:31:31,360 - simplenet_training - INFO - Epoch: 0, batch: 18, batch_size: 8. 
+Loss 320.60504150390625 
+
+2025-12-14 22:31:31,721 - simplenet_training - INFO - Epoch: 0, batch: 19, batch_size: 8. 
+Loss 564.4674682617188 
+
+2025-12-14 22:31:32,077 - simplenet_training - INFO - Epoch: 0, batch: 20, batch_size: 8. 
+Loss 365.24359130859375 
+
+2025-12-14 22:31:32,435 - simplenet_training - INFO - Epoch: 0, batch: 21, batch_size: 8. 
+Loss 707.392822265625 
+
+2025-12-14 22:31:32,792 - simplenet_training - INFO - Epoch: 0, batch: 22, batch_size: 8. 
+Loss 676.3660278320312 
+
+2025-12-14 22:31:33,307 - simplenet_training - INFO - Epoch: 0, batch: 23, batch_size: 8. 
+Loss 258.02886962890625 
+
+2025-12-14 22:31:33,679 - simplenet_training - INFO - Epoch: 0, batch: 24, batch_size: 8. 
+Loss 384.3740234375 
+
+2025-12-14 22:31:34,165 - simplenet_training - INFO - Epoch: 0, batch: 25, batch_size: 8. 
+Loss 247.54364013671875 
+
+2025-12-14 22:31:34,533 - simplenet_training - INFO - Epoch: 0, batch: 26, batch_size: 8. 
+Loss 366.41949462890625 
+
+2025-12-14 22:31:34,766 - simplenet_training - INFO - Epoch: 0, batch: 27, batch_size: 8. 
+Loss 43.77677917480469 
+
+2025-12-14 22:31:34,767 - simplenet_training - INFO - Epoch: 0. Best lost so far: 43.77677917480469
+2025-12-14 22:31:35,129 - simplenet_training - INFO - Epoch: 1, batch: 1, batch_size: 8. 
+Loss 942.1929321289062 
+
+2025-12-14 22:31:35,589 - simplenet_training - INFO - Epoch: 1, batch: 2, batch_size: 8. 
+Loss 584.9951171875 
+
+2025-12-14 22:31:35,960 - simplenet_training - INFO - Epoch: 1, batch: 3, batch_size: 8. 
+Loss 500.0481262207031 
+
+2025-12-14 22:31:36,316 - simplenet_training - INFO - Epoch: 1, batch: 4, batch_size: 8. 
+Loss 655.54052734375 
+
+2025-12-14 22:31:36,671 - simplenet_training - INFO - Epoch: 1, batch: 5, batch_size: 8. 
+Loss 140.9859619140625 
+
+2025-12-14 22:31:37,027 - simplenet_training - INFO - Epoch: 1, batch: 6, batch_size: 8. 
+Loss 540.05078125 
+
+2025-12-14 22:31:37,384 - simplenet_training - INFO - Epoch: 1, batch: 7, batch_size: 8. 
+Loss 238.8966827392578 
+
+2025-12-14 22:31:37,740 - simplenet_training - INFO - Epoch: 1, batch: 8, batch_size: 8. 
+Loss 598.2781982421875 
+
+2025-12-14 22:31:38,114 - simplenet_training - INFO - Epoch: 1, batch: 9, batch_size: 8. 
+Loss 750.6344604492188 
+
+2025-12-14 22:31:38,471 - simplenet_training - INFO - Epoch: 1, batch: 10, batch_size: 8. 
+Loss 134.31805419921875 
+
+2025-12-14 22:31:38,827 - simplenet_training - INFO - Epoch: 1, batch: 11, batch_size: 8. 
+Loss 703.0652465820312 
+
+2025-12-14 22:31:39,275 - simplenet_training - INFO - Epoch: 1, batch: 12, batch_size: 8. 
+Loss 629.7844848632812 
+
+2025-12-14 22:31:39,639 - simplenet_training - INFO - Epoch: 1, batch: 13, batch_size: 8. 
+Loss 183.75616455078125 
+
+2025-12-14 22:31:39,995 - simplenet_training - INFO - Epoch: 1, batch: 14, batch_size: 8. 
+Loss 390.7904968261719 
+
+2025-12-14 22:31:40,350 - simplenet_training - INFO - Epoch: 1, batch: 15, batch_size: 8. 
+Loss 152.5974578857422 
+
+2025-12-14 22:31:40,706 - simplenet_training - INFO - Epoch: 1, batch: 16, batch_size: 8. 
+Loss 196.91075134277344 
+
+2025-12-14 22:31:41,062 - simplenet_training - INFO - Epoch: 1, batch: 17, batch_size: 8. 
+Loss 311.6558532714844 
+
+2025-12-14 22:31:41,418 - simplenet_training - INFO - Epoch: 1, batch: 18, batch_size: 8. 
+Loss 134.4132843017578 
+
+2025-12-14 22:31:41,774 - simplenet_training - INFO - Epoch: 1, batch: 19, batch_size: 8. 
+Loss 394.0979919433594 
+
+2025-12-14 22:31:42,130 - simplenet_training - INFO - Epoch: 1, batch: 20, batch_size: 8. 
+Loss 164.9373321533203 
+
+2025-12-14 22:31:42,489 - simplenet_training - INFO - Epoch: 1, batch: 21, batch_size: 8. 
+Loss 559.9708251953125 
+
+2025-12-14 22:31:42,844 - simplenet_training - INFO - Epoch: 1, batch: 22, batch_size: 8. 
+Loss 486.08349609375 
+
+2025-12-14 22:31:43,199 - simplenet_training - INFO - Epoch: 1, batch: 23, batch_size: 8. 
+Loss 286.9685974121094 
+
+2025-12-14 22:31:43,554 - simplenet_training - INFO - Epoch: 1, batch: 24, batch_size: 8. 
+Loss 287.431640625 
+
+2025-12-14 22:31:43,908 - simplenet_training - INFO - Epoch: 1, batch: 25, batch_size: 8. 
+Loss 309.5838928222656 
+
+2025-12-14 22:31:44,267 - simplenet_training - INFO - Epoch: 1, batch: 26, batch_size: 8. 
+Loss 212.4178466796875 
+
+2025-12-14 22:31:44,324 - simplenet_training - INFO - Epoch: 1, batch: 27, batch_size: 8. 
+Loss 54.94564437866211 
+
+2025-12-14 22:31:44,324 - simplenet_training - INFO - Epoch: 1. Best lost so far: 43.77677917480469

@@ -23,7 +23,7 @@ import json
 with open("training_config.json", "r") as f:
     training_config = json.load(f)
 
-root_logger = logging.getLogger("simplenet_training")
+root_logger = logging.getLogger()
 root_logger.setLevel(logging.DEBUG)
 handler = logging.StreamHandler(sys.stdout)
 
