@@ -30,7 +30,7 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 handler.setFormatter(formatter)
 root_logger.addHandler(handler)
 
-train_dataset = MVTECTrainset(category="hazelnut")
+train_dataset = MVTECTrainset(category=training_config["category"])
 
 batch_size = 8
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)

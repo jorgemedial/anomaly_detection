@@ -1,3 +1,4 @@
 {
-    "total_epochs": 100
+    "total_epochs": 100,
+    "category": "bottle"
 }

@@ -9,6 +9,11 @@ from torch.utils.data import DataLoader
 from simplenet import Simplenet
 from MVTecAD import MVTECTestset
 import torch.nn.functional as F
+import json
+
+with open("training_config", "r") as f:
+    config = json.load(f)
+
 
 
 def process_output(output):
@@ -40,7 +45,7 @@ if __name__ == "__main__":
     device = torch.device('cpu')
     simplenet.eval()
  
-    cracked_dataset = MVTECTestset(category="hazelnut", anomaly_name="crack")
+    cracked_dataset = MVTECTestset(category=config["category"], anomaly_name="crack")
 
     
     with torch.no_grad():
