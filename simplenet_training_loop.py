@@ -47,7 +47,12 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 if __name__ == "__main__":
 
     Simplenet = Simplenet().to(device)
-    optimizer = torch.optim.Adam(Simplenet.parameters(), lr=0.0001, weight_decay=0.00001)
+    optimizer = torch.optim.Adam(
+        [
+            {"params": Simplenet.conv1x1.parameters(), "lr": 0.0001, "weight_decay":0.00001},
+            {"params": Simplenet.discriminator.parameters(), "lr": 0.0002, "weight_decay":0.00001},
+        ]
+    )
 
     best_loss = torch.tensor(np.inf)
     for i in range(training_config["total_epochs"]):

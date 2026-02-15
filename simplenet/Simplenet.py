@@ -27,7 +27,7 @@ class Simplenet(torch.nn.Module):
         # Sabemos que layer3 de ResNet50 tiene 1024 canales
         feature_channel_size = 1536
 
-        self.sigma_noise = 0.1
+        self.sigma_noise = 0.015
         self.conv1x1 = torch.nn.Conv2d(feature_channel_size, feature_channel_size, kernel_size=1)
 
         self.discriminator = torch.nn.Sequential(
