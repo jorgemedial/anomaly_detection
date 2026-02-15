@@ -54,7 +54,9 @@ if __name__ == "__main__":
         ]
     )
 
-    best_loss = torch.tensor(np.inf)
+    best_epoch_loss = torch.tensor(np.inf)
+    epoch_loss = 0
+    no_of_batches = 0
     for i in range(training_config["total_epochs"]):
         for batch_idx, data in enumerate(train_loader, 1):
             optimizer.zero_grad()
@@ -64,10 +66,14 @@ if __name__ == "__main__":
             loss = Simplenet.loss(z_score_correct, z_score_altered)
             loss.backward()
             optimizer.step()
-            if loss < best_loss:
-                best_loss = loss
-                torch.save(Simplenet.state_dict(), "model.pth")
+
+            epoch_loss += loss 
+            no_of_batches += 1
             root_logger.info(f"Epoch: {i}, batch: {batch_idx}, batch_size: {batch_size}. \nLoss {loss} \n")
-        root_logger.info(f"Epoch: {i}. Best lost so far: {best_loss}")
+
+        if epoch_loss < best_epoch_loss:
+                best_epoch_loss = epoch_loss
+                torch.save(Simplenet.state_dict(), "model.pth")
+        root_logger.info(f"Epoch: {i}. Best lost so far: {best_epoch_loss/no_of_batches}")
     
    
