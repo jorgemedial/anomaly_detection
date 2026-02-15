@@ -1,7 +1,7 @@
 {
     "bottle": {
         "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420937370-1629958698/bottle.tar.xz",
-        "download": true
+        "download": false
     },
     "cable": {
         "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420937413-1629958794/cable.tar.xz",
@@ -13,7 +13,7 @@
     },
     "carpet": {
         "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420937484-1629959013/carpet.tar.xz",
-        "download": false
+        "download": true
     },
     "grid": {
         "url": "https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420937487-1629959044/grid.tar.xz",
