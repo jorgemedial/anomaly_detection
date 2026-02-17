@@ -50,13 +50,12 @@ if __name__ == "__main__":
     
     with torch.no_grad():
         for i in range(anomalous_dataset.__len__()):
-            frame = anomalous_dataset.__getitem__(i, transformed=False)
+            frame = anomalous_dataset.get_image_as_frame(i)
             data = anomalous_dataset.__getitem__(i).unsqueeze(0)
             data = data.to(device)             
             outputs = simplenet(data)
             for output in outputs:
                 # Original image
-                frame = anomalous_dataset.get_image_as_frame(i)
                 shape = frame.shape[:2]
 
                 # Heatmap
