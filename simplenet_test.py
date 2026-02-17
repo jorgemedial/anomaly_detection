@@ -11,7 +11,7 @@ import torch.nn.functional as F
 import json
 import cv2
 
-BLEND_RATIO = 0.7
+BLEND_RATIO = 0.3
 
 with open("training_config.json", "r") as f:
     config = json.load(f)
@@ -65,11 +65,11 @@ if __name__ == "__main__":
                 anomaly_heatmap = cv2.resize(anomaly_heatmap, shape)
 
                 # Fusion
-                blend = BLEND_RATIO * frame + (1 - BLEND_RATIO) * anomaly_heatmap
-                
+                blend = BLEND_RATIO * anomaly_heatmap + (1 - BLEND_RATIO) * frame
+                full_picture = np.concat([blend, anomaly_heatmap], axis=1)
 
                 filename = anomalous_dataset.filename_from_index(i)
-                cv2.imwrite(filename, blend)
+                cv2.imwrite(filename, full_picture)
     
 
 
