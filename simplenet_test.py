@@ -2,7 +2,6 @@ import os
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
 import torch
 from torch.utils.data import DataLoader
 
@@ -10,6 +9,9 @@ from simplenet import Simplenet
 from MVTecAD import MVTECTestset
 import torch.nn.functional as F
 import json
+import cv2
+
+BLEND_RATIO = 0.7
 
 with open("training_config.json", "r") as f:
     config = json.load(f)
@@ -31,9 +33,7 @@ def export_as_image(anomaly_map: torch.Tensor):
     arr = np.maximum(0, arr - 0.5) + 1 # values below 0.5 are not considered anomalies due to the loss function definition.
     arr = np.minimum(255, np.log(arr) * 1000).astype(np.uint8) # The arr values are scaled up for visualization. Saturates at arr = 0.79
     
-    return Image.fromarray(arr, mode="L")         # "L" = 8-bit grayscale
-
-
+    return cv2.applyColorMap(arr, cv2.COLORMAP_JET)      
 
 if __name__ == "__main__":
 
@@ -50,15 +50,26 @@ if __name__ == "__main__":
     
     with torch.no_grad():
         for i in range(anomalous_dataset.__len__()):
+            frame = anomalous_dataset.__getitem__(i, transformed=False)
             data = anomalous_dataset.__getitem__(i).unsqueeze(0)
             data = data.to(device)             
             outputs = simplenet(data)
             for output in outputs:
-                anomaly_map = process_output(output)
-                image = export_as_image(anomaly_map)
-                filename = anomalous_dataset.filename_from_index(i)
-                image.save(filename)
+                # Original image
+                frame = anomalous_dataset.get_image_as_frame(i)
+                shape = frame.shape[:2]
 
+                # Heatmap
+                anomaly_map = process_output(output)
+                anomaly_heatmap = export_as_image(anomaly_map)
+                anomaly_heatmap = cv2.resize(anomaly_heatmap, shape)
+
+                # Fusion
+                blend = BLEND_RATIO * frame + (1 - BLEND_RATIO) * anomaly_heatmap
+                
+
+                filename = anomalous_dataset.filename_from_index(i)
+                cv2.imwrite(filename, blend)
     
 
 

@@ -3,6 +3,7 @@ import torchvision
 from torch.utils.data import Dataset
 import PIL
 import os
+import cv2
 
 class MVTECTestset(Dataset):
     def __init__(self,  category: str, anomaly_name: str, root = "./datasets/MVTecAD"):
@@ -26,6 +27,9 @@ class MVTECTestset(Dataset):
         img = PIL.Image.open(self.input_path / Path(f"{index:>03}.png")).convert("RGB")
         img = self.transformations(img)
         return img
+    
+    def get_image_as_frame(self, index):
+        return cv2.imread(self.input_path / Path(f"{index:>03}.png"))
     
 
     def filename_from_index(self, index: int):
