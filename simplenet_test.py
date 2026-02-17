@@ -29,7 +29,7 @@ def export_as_image(anomaly_map: torch.Tensor):
 
     # Normalize to 0–255 if values are not already in that range
     arr = np.maximum(0, arr - 0.5) + 1 # values below 0.5 are not considered anomalies due to the loss function definition.
-    arr = np.minimum(255, np.log(arr) * 400).astype(np.uint8) # The arr values are scaled up for visualization
+    arr = np.minimum(255, np.log(arr) * 1000).astype(np.uint8) # The arr values are scaled up for visualization. Saturates at arr = 0.79
     
     return Image.fromarray(arr, mode="L")         # "L" = 8-bit grayscale
 
