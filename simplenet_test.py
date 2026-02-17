@@ -28,10 +28,9 @@ def export_as_image(anomaly_map: torch.Tensor):
     arr = anomaly_map.squeeze(-1).cpu().numpy()     # → (H, W)
 
     # Normalize to 0–255 if values are not already in that range
-    arr = max(0, arr - 0.5) # values below 0.5 were not penalized. We turn them into 0
-    arr = min(255, arr * 1000).astype(np.uint8)
+    arr = F.relu(arr - 0.5) # values below 0.5 were not penalized.
+    arr = 255 - F.relu(255 - arr * 1000).astype(np.uint8) # Equivalent to min(255, arr * 1000). The arr values are scaled up for visualization
     
-
     return Image.fromarray(arr, mode="L")         # "L" = 8-bit grayscale
 
 
